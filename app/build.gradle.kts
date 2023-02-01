@@ -1,18 +1,18 @@
 @file:Suppress("UnstableApiUsage")
 
-import com.github.dawn.BuildType
+import com.github.loacq.BuildType
 
 plugins {
-    id("dawn.android.application")
-    id("dawn.android.application.compose")
-    id("dawn.android.hilt")
+    id("loacq.android.application")
+    id("loacq.android.application.compose")
+    id("loacq.android.hilt")
 }
 
 android {
-    namespace = "io.github.dawn"
+    namespace = "io.github.loacq"
 
     defaultConfig {
-        applicationId = "io.github.dawn"
+        applicationId = "io.github.loacq"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

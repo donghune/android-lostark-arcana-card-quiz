@@ -1,4 +1,4 @@
-# android-dawn
+# android-loacq
 
 안드로이드를 개발하면서 비슷한 프로젝트 생성에 귀찮아 템플릿 프로젝트를 제작하였습니다.
 
@@ -26,11 +26,11 @@ java {
 
 ``` kotlin
 plugins {
-    id("dawn.android.library")
+    id("loacq.android.library")
 }
 
 android {
-    namespace = "io.github.dawn"
+    namespace = "io.github.loacq"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

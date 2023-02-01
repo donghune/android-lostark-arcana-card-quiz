@@ -1,4 +1,4 @@
-package com.github.dawn
+package com.github.loacq
 
 enum class DawnBuildType(val applicationIdSuffix: String? = null) {
     DEBUG(".debug"),

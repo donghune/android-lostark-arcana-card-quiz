@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "dawn"
+rootProject.name = "loacq"
 rootProject.buildFileName = "build.gradle.kts"
 
 include(":app")
