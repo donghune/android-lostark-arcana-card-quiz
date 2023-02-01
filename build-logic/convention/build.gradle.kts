@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.github.dawn.buildlogic"
+group = "com.github.loacq.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -17,27 +17,27 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = "dawn.android.application"
+            id = "loacq.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidLibrary") {
-            id = "dawn.android.library"
+            id = "loacq.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidApplicationCompose") {
-            id = "dawn.android.application.compose"
+            id = "loacq.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "dawn.android.library.compose"
+            id = "loacq.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidFeature") {
-            id = "dawn.android.feature"
+            id = "loacq.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
         register("androidHilt") {
-            id = "dawn.android.hilt"
+            id = "loacq.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
     }

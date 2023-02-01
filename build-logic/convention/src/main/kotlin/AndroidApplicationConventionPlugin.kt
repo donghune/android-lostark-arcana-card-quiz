@@ -1,7 +1,7 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.github.dawn.buildVersionCode
-import com.github.dawn.buildVersionName
-import com.github.dawn.configureKotlinAndroid
+import com.github.loacq.buildVersionCode
+import com.github.loacq.buildVersionName
+import com.github.loacq.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

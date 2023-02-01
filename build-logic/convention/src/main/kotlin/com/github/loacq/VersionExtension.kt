@@ -1,4 +1,4 @@
-package com.github.dawn
+package com.github.loacq
 
 import org.gradle.api.Project
 import java.io.File
