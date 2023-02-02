@@ -11,6 +11,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             pluginManager.apply {
                 apply("loacq.android.library")
                 apply("loacq.android.hilt")
+                apply("com.google.gms.google-services")
             }
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
@@ -22,6 +23,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("androidTestImplementation", kotlin("test"))
 
                 add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
+                add("implementation", platform("com.google.firebase:firebase-bom:31.2.0"))
+                add("implementation", ("com.google.firebase:firebase-analytics-ktx"))
             }
         }
     }

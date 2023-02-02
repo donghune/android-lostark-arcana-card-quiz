@@ -6,6 +6,7 @@ plugins {
     id("loacq.android.application")
     id("loacq.android.application.compose")
     id("loacq.android.hilt")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -52,6 +53,8 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:$composeVersion")
     debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$composeVersion")
+    implementation(platform("com.google.firebase:firebase-bom:31.2.0"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
 
     implementation(project(":core:design_system"))
 }
