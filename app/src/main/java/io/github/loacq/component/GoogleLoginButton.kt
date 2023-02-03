@@ -2,7 +2,10 @@ package io.github.loacq.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -31,13 +34,16 @@ fun GoogleLoginButtonLongPreview() {
 }
 
 @Composable
-fun GoogleLoginButton(modifier: Modifier = Modifier) {
+fun GoogleLoginButton(
+    modifier: Modifier = Modifier,
+    onClickLoginButton: () -> Unit = {},
+) {
     ElevatedButton(
         modifier = modifier
             .fillMaxWidth()
             .height(48.dp),
         colors = ButtonDefaults.buttonColors(containerColor = Color.White),
-        onClick = {}
+        onClick = onClickLoginButton
     ) {
         Box {
             Text(
