@@ -1,5 +1,6 @@
 plugins {
     id("loacq.android.library")
+    id("loacq.android.hilt")
 }
 
 android {
