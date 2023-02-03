@@ -45,6 +45,9 @@ internal fun Project.configureKotlinAndroid(
     val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
     dependencies {
+        val bom = libs.findLibrary("kotlin-bom").get()
+        add("implementation", platform(bom))
+        add("androidTestImplementation", platform(bom))
         add("coreLibraryDesugaring", libs.findLibrary("android.desugarJdkLibs").get())
     }
 }

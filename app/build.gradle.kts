@@ -4,6 +4,7 @@ import com.github.loacq.BuildType
 
 plugins {
     id("loacq.android.application")
+    id("loacq.android.application.firebase")
     id("loacq.android.application.compose")
     id("loacq.android.hilt")
     id("com.google.gms.google-services")

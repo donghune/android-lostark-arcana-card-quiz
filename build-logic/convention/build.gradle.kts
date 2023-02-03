@@ -32,6 +32,14 @@ gradlePlugin {
             id = "loacq.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
+        register("androidApplicationFirebase") {
+            id = "loacq.android.application.firebase"
+            implementationClass = "AndroidApplicationFirebaseConventionPlugin"
+        }
+        register("androidLibraryFirebase") {
+            id = "loacq.android.library.firebase"
+            implementationClass = "AndroidLibraryFirebaseConventionPlugin"
+        }
         register("androidFeature") {
             id = "loacq.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
