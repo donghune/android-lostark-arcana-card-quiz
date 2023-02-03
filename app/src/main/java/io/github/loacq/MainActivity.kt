@@ -21,7 +21,6 @@ import io.github.loacq.design_system.theme.LostArkTheme
 import io.github.loacq.feature.login.loginNavigationRoute
 import io.github.loacq.feature.login.loginScreen
 
-
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

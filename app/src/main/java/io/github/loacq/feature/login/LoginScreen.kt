@@ -33,7 +33,6 @@ import io.github.loacq.component.GoogleLoginButton
 import io.github.loacq.design_system.theme.LostArkTheme
 import kotlinx.coroutines.delay
 
-
 @Composable
 fun LoginScreenRoute(
     modifier: Modifier = Modifier,
