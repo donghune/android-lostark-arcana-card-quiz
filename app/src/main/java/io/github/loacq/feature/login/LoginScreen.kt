@@ -37,7 +37,7 @@ import kotlinx.coroutines.delay
 fun LoginScreenRoute(
     modifier: Modifier = Modifier,
     onLoginSuccess: () -> Unit,
-    viewModel: LoginViewModel = hiltViewModel(),
+    viewModel: LoginViewModel = hiltViewModel()
 ) {
     val launcher = rememberLauncherForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
@@ -68,11 +68,7 @@ fun LoginScreenRoute(
     }
 
     LaunchedEffect(key1 = uiState.user) {
-        uiState.user?.let { onLoginSuccess() }
-    }
-
-    if (uiState.user != null) {
-        LaunchedEffect(true) {
+        uiState.user?.let {
             delay(1000L)
             onLoginSuccess()
         }
@@ -81,7 +77,7 @@ fun LoginScreenRoute(
     LoginScreen(
         modifier = modifier,
         isUserAuthenticated = uiState.isLogin,
-        onClickLoginButton = viewModel::oneTapSignIn,
+        onClickLoginButton = viewModel::oneTapSignIn
     )
 }
 
@@ -89,10 +85,10 @@ fun LoginScreenRoute(
 fun LoginScreen(
     modifier: Modifier = Modifier,
     isUserAuthenticated: Boolean = false,
-    onClickLoginButton: () -> Unit = {},
+    onClickLoginButton: () -> Unit = {}
 ) {
     Surface(
-        modifier = modifier.background(MaterialTheme.colorScheme.background),
+        modifier = modifier.background(MaterialTheme.colorScheme.background)
     ) {
         Box(modifier.padding(horizontal = 16.dp)) {
             Column(

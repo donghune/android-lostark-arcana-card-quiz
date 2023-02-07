@@ -1,6 +1,5 @@
 package io.github.loacq.feature.login
 
-import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
@@ -12,10 +11,10 @@ fun NavController.navigateToLoginScreen(navOptions: NavOptions? = null) {
     this.navigate(loginNavigationRoute, navOptions)
 }
 
-fun NavGraphBuilder.loginScreen() {
+fun NavGraphBuilder.loginScreen(onLoginSuccess: () -> Unit) {
     composable(route = loginNavigationRoute) {
         LoginScreenRoute(
-            onLoginSuccess = { Log.d("LoginNavigation", "loginScreen: login success") }
+            onLoginSuccess = onLoginSuccess
         )
     }
 }

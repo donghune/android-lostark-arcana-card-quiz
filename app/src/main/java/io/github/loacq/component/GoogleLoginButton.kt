@@ -36,7 +36,7 @@ fun GoogleLoginButtonLongPreview() {
 @Composable
 fun GoogleLoginButton(
     modifier: Modifier = Modifier,
-    onClickLoginButton: () -> Unit = {},
+    onClickLoginButton: () -> Unit = {}
 ) {
     ElevatedButton(
         modifier = modifier

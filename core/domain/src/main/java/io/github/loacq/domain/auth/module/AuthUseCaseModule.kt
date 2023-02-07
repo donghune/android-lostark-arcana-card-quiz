@@ -26,7 +26,7 @@ object AuthUseCaseModule {
 
     @Provides
     fun provideGetIsUserFirebaseUseCase(
-        authRepository: AuthRepository,
+        authRepository: AuthRepository
     ): GetCurrentUserUseCase {
         return GetCurrentUserUseCase(
             authRepository = authRepository
@@ -36,7 +36,7 @@ object AuthUseCaseModule {
     @Provides
     fun provideSignInFirebaseUseCase(
         auth: FirebaseAuth,
-        authRepository: AuthRepository,
+        authRepository: AuthRepository
     ): SignInFirebaseUseCase {
         return SignInFirebaseUseCase(
             auth = auth,
@@ -50,7 +50,7 @@ object AuthUseCaseModule {
         @Named("SIGN_IN_REQUEST")
         signInRequest: BeginSignInRequest,
         @Named("SIGN_UP_REQUEST")
-        signUpRequest: BeginSignInRequest,
+        signUpRequest: BeginSignInRequest
     ): SignInGoogleUseCase {
         return SignInGoogleUseCase(
             oneTapClient = oneTapClient,
@@ -62,13 +62,13 @@ object AuthUseCaseModule {
     @Provides
     fun provideOneTapClient(
         @ApplicationContext
-        context: Context,
+        context: Context
     ) = Identity.getSignInClient(context)
 
     @Provides
     @Named("SIGN_IN_REQUEST")
     fun provideSignInRequest(
-        app: Application,
+        app: Application
     ) = BeginSignInRequest.builder()
         .setGoogleIdTokenRequestOptions(
             BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
@@ -83,7 +83,7 @@ object AuthUseCaseModule {
     @Provides
     @Named("SIGN_UP_REQUEST")
     fun provideSignUpRequest(
-        app: Application,
+        app: Application
     ) = BeginSignInRequest.builder()
         .setGoogleIdTokenRequestOptions(
             BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
@@ -96,7 +96,7 @@ object AuthUseCaseModule {
 
     @Provides
     fun provideGoogleSignInOptions(
-        app: Application,
+        app: Application
     ) = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
         .requestIdToken(app.getString(R.string.gcp_clinet_id))
         .requestEmail()
@@ -105,7 +105,6 @@ object AuthUseCaseModule {
     @Provides
     fun provideGoogleSignInClient(
         app: Application,
-        options: GoogleSignInOptions,
+        options: GoogleSignInOptions
     ) = GoogleSignIn.getClient(app, options)
-
 }

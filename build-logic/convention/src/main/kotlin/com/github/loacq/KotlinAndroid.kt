@@ -11,7 +11,7 @@ import org.gradle.kotlin.dsl.provideDelegate
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
 internal fun Project.configureKotlinAndroid(
-    commonExtension: CommonExtension<*, *, *, *>,
+    commonExtension: CommonExtension<*, *, *, *>
 ) {
     commonExtension.apply {
         compileSdk = 33
@@ -34,7 +34,7 @@ internal fun Project.configureKotlinAndroid(
                 "-opt-in=kotlin.RequiresOptIn",
                 "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
                 "-opt-in=kotlinx.coroutines.FlowPreview",
-                "-opt-in=kotlin.Experimental",
+                "-opt-in=kotlin.Experimental"
             )
 
             // Set JVM target to 1.8

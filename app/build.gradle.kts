@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.play.services.auth)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.navigation.compose)
+    implementation("androidx.window:window-core:+")
 
     testImplementation(libs.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)

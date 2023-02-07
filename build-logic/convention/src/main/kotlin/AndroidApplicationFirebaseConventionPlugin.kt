@@ -11,5 +11,4 @@ class AndroidApplicationFirebaseConventionPlugin : Plugin<Project> {
             configureFirebase(extension)
         }
     }
-
 }

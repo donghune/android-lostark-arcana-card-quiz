@@ -19,7 +19,7 @@ class LoginViewModel @Inject constructor(
     private val signInGoogle: SignInGoogleUseCase,
     private val signInFirebase: SignInFirebaseUseCase,
     private val getCurrentUser: GetCurrentUserUseCase,
-    val oneTapClient: SignInClient,
+    val oneTapClient: SignInClient
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(LoginUiState())

@@ -12,7 +12,7 @@ class SignInGoogleUseCase @Inject constructor(
     @Named("SIGN_IN_REQUEST")
     private var signInRequest: BeginSignInRequest,
     @Named("SIGN_UP_REQUEST")
-    private var signUpRequest: BeginSignInRequest,
+    private var signUpRequest: BeginSignInRequest
 ) {
     @Throws(Exception::class)
     suspend operator fun invoke(): BeginSignInResult? {

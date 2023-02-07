@@ -10,7 +10,7 @@ import javax.inject.Singleton
 @Singleton
 class AuthRepositoryImpl @Inject constructor(
     private val auth: FirebaseAuth,
-    private val db: FirebaseFirestore,
+    private val db: FirebaseFirestore
 ) : AuthRepository {
     override suspend fun getCurrentUser(): FirebaseUser? {
         return auth.currentUser
