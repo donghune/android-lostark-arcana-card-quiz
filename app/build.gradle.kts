@@ -62,7 +62,7 @@ dependencies {
     implementation(libs.play.services.auth)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.navigation.compose)
-    implementation("androidx.window:window-core:+")
+    implementation("androidx.core:core-splashscreen:1.0.0")
 
     testImplementation(libs.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)

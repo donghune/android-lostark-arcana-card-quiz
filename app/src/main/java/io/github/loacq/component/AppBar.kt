@@ -16,11 +16,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.auth.FirebaseUser
 
 @Composable
-fun LoaCqAppBar(modifier: Modifier = Modifier) {
+fun LoaCqAppBar(modifier: Modifier = Modifier, firebaseUser: FirebaseUser) {
     TopAppBar(
         modifier = modifier,
         title = {
@@ -31,7 +30,7 @@ fun LoaCqAppBar(modifier: Modifier = Modifier) {
                     contentDescription = null,
                     colorFilter = ColorFilter.tint(Color.White)
                 )
-                Text(text = "${Firebase.auth.currentUser?.displayName}님 어서오세요")
+                Text(text = "${firebaseUser.displayName}님 어서오세요")
             }
         }
     )

@@ -15,7 +15,7 @@
         <activity
             android:name="io.github.loacq.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Dawn">
+            android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
